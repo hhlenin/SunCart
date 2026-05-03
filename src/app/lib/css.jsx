@@ -1,1 +1,1 @@
-export const commonDivClass = "bg-white px-10 py-7 rounded-full border border-[#ecdcc6e6]";
+export const commonDivClass = "mt-10 bg-white px-10 py-7 rounded-2xl border border-[#ecdcc6e6]";
