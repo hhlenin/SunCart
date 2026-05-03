@@ -1,0 +1,1 @@
+export const commonDivClass = "bg-white px-10 py-7 rounded-full border border-[#ecdcc6e6]";
