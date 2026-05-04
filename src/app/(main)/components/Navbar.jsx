@@ -12,7 +12,7 @@ const Footer = () => {
             </div>
             <div>
                 <ul className="flex items-center text-xl gap-8">
-                    <li><Link href={'/'}>Home</Link></li>
+                    <li><Link href={'/public'}>Home</Link></li>
                     <li><Link href={'/products'}>Products</Link></li>
                     <li><Link href={'/profile'}>My Profile</Link></li>
                 </ul>
