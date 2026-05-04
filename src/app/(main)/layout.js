@@ -1,5 +1,7 @@
 import { Inter} from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -18,7 +20,13 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${interFont.className} h-full antialiased bg-linear-to-b from-[#fff9f1] to-[#fff5ea]` }
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+      <div className="container mx-auto">
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
+      </body>
     </html>
   );
 }
