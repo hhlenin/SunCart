@@ -1,4 +1,4 @@
-import {Facebook, Instagram, LinkedIn, ShoppingCart, X} from "@deemlol/next-icons";
+import {Facebook, Instagram, LinkedIn, ShoppingCart, Star, X} from "@deemlol/next-icons";
 import Link from "next/link";
 import {commonDivClass} from "@/app/lib/css";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import footer from "daisyui/components/footer";
 export default function Home() {
   return (
       <div className="container mx-auto">
-        <nav className={`navbar flex justify-between items-center  ${commonDivClass} `}>
+        <nav className={`navbar flex justify-between items-center  ${commonDivClass()} `}>
           <div className="flex items-center">
               <ShoppingCart size={64} color="#ec4899" strokeWidth={2.5} />
               <p className="text-4xl font-extrabold">SunCart</p>
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </nav>
           <div className={`hero grid grid-cols-3 gap-8 container`}>
-              <div className={`col-span-1 space-y-5 h-180 ${commonDivClass} `}>
+              <div className={`col-span-1 space-y-5 h-180 ${commonDivClass()} `}>
                   <p className="badge badge-xl badge-warning badge-soft">☀️ Summer Sale 50% OFF</p>
                   <h2 className="text-7xl font-extrabold">Hot deals for sunny days and weekend escapes.</h2>
                   <p className="text-xl text-gray-500">
@@ -39,7 +39,7 @@ export default function Home() {
                       <button className="btn btn-xl border-gray-500">View Products</button>
                   </div>
               </div>
-              <div className={`col-span-2  h-180 w-full bg-[#ffe6c6] px-10 py-7 rounded-2xl border border-[#ecdcc6e6]`}>
+              <div className={`col-span-2 h-180 w-full ${commonDivClass("bg-[#ffe6c6]")} `}>
                   <div className="carousel rounded-box w-full">
                       <div className="carousel-item h-180 w-full">
                           <Image
@@ -54,7 +54,70 @@ export default function Home() {
                   </div>
               </div>
           </div>
-          <footer className={`grid grid-cols-5 gap-8 ${commonDivClass} mb-10`}>
+
+          <div className={`popular-products space-y-2 ${commonDivClass("bg-transparent", false)} mt-30`}>
+              <h2 className="text-5xl font-extrabold">Popular Products</h2>
+              <p className="text-gray-500 text-xl font-medium">Three featured cards drawn from the static product dataset.</p>
+              <div className="mt-8 grid grid-cols-3 gap-8">
+                  <div className="card bg-base-100 shadow-sm">
+                      <figure>
+                          <img
+                              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                              alt="Shoes" />
+                      </figure>
+                      <div className="card-body space-y-2">
+                          <p className="badge badge-lg badge-primary font-bold">Accessories</p>
+                          <h2 className="card-title text-3xl font-bold">Card Title</h2>
+                          <div className="flex justify-between">
+                              <p className="text-2xl font-medium text-gray-500">
+                                  ⭐ 4.7
+                              </p>
+                              <p className="text-right font-medium text-2xl text-gray-500">$15</p>
+                          </div>
+                          <button className="btn btn-primary block btn-lg">View Details</button>
+                      </div>
+                  </div>
+                  <div className="card bg-base-100 shadow-sm">
+                      <figure>
+                          <img
+                              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                              alt="Shoes" />
+                      </figure>
+                      <div className="card-body space-y-2">
+                          <p className="badge badge-lg badge-primary font-bold">Accessories</p>
+                          <h2 className="card-title text-3xl font-bold">Card Title</h2>
+                          <div className="flex justify-between">
+                              <p className="text-2xl font-medium text-gray-500">
+                                  ⭐ 4.7
+                              </p>
+                              <p className="text-right font-medium text-2xl text-gray-500">$15</p>
+                          </div>
+                          <button className="btn btn-primary block btn-lg">View Details</button>
+                      </div>
+                  </div>
+                  <div className="card bg-base-100 shadow-sm">
+                      <figure>
+                          <img
+                              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                              alt="Shoes" />
+                      </figure>
+                      <div className="card-body space-y-2">
+                          <p className="badge badge-lg badge-primary font-bold">Accessories</p>
+                          <h2 className="card-title text-3xl font-bold">Card Title</h2>
+                          <div className="flex justify-between">
+                              <p className="text-2xl font-medium text-gray-500">
+                                  ⭐ 4.7
+                              </p>
+                              <p className="text-right font-medium text-2xl text-gray-500">$15</p>
+                          </div>
+                          <button className="btn btn-primary block btn-lg">View Details</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          <footer className={`grid grid-cols-5 gap-8 ${commonDivClass()} mb-10`}>
               <div className="col-span-2 space-y-4">
                   <div className="flex items-center">
                       <ShoppingCart size={32} color="#ec4899" strokeWidth={2.5} />
