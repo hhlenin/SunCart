@@ -7,7 +7,7 @@ import footer from "daisyui/components/footer";
 export default function Home() {
   return (
       <div className="container mx-auto">
-        <nav className={`navbar flex justify-between items-center ${commonDivClass}`}>
+        <nav className={`navbar flex justify-between items-center  ${commonDivClass} `}>
           <div className="flex items-center">
               <ShoppingCart size={64} color="#ec4899" strokeWidth={2.5} />
               <p className="text-4xl font-extrabold">SunCart</p>
@@ -27,7 +27,34 @@ export default function Home() {
               </button>
           </div>
         </nav>
-          <footer className={`grid grid-cols-5 gap-8 ${commonDivClass}`}>
+          <div className={`hero grid grid-cols-3 gap-8 container`}>
+              <div className={`col-span-1 space-y-5 h-180 ${commonDivClass} `}>
+                  <p className="badge badge-xl badge-warning badge-soft">☀️ Summer Sale 50% OFF</p>
+                  <h2 className="text-7xl font-extrabold">Hot deals for sunny days and weekend escapes.</h2>
+                  <p className="text-xl text-gray-500">
+                      A clean summer e-commerce concept with a persistent navbar and footer, product cards, protected details route, BetterAuth login flow, Google auth CTA, profile view, and update-info screens.
+                  </p>
+                  <div className="space-x-5">
+                      <button className="btn btn-xl btn-primary">Shop Now</button>
+                      <button className="btn btn-xl border-gray-500">View Products</button>
+                  </div>
+              </div>
+              <div className={`col-span-2  h-180 w-full bg-[#ffe6c6] px-10 py-7 rounded-2xl border border-[#ecdcc6e6]`}>
+                  <div className="carousel rounded-box w-full">
+                      <div className="carousel-item h-180 w-full">
+                          <Image
+                              height={0}
+                              width={100}
+                              style={{ width: "100%", height: "80" }}
+                              src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
+                              className="rounded-box"
+                              alt="Tailwind CSS Carousel component" />
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <footer className={`grid grid-cols-5 gap-8 ${commonDivClass} mb-10`}>
               <div className="col-span-2 space-y-4">
                   <div className="flex items-center">
                       <ShoppingCart size={32} color="#ec4899" strokeWidth={2.5} />
@@ -49,11 +76,11 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                   <p className="text-2xl font-bold">Social</p>
-                  <div className="text-gray-500">
-                      <a className="flex items-center gap-1"><Instagram size={16}></Instagram> Instagram</a>
-                      <a className="flex items-center gap-1"><Facebook size={16}></Facebook> Facebook</a>
-                      <a className="flex items-center gap-1"><X size={16}></X> X</a>
-                      <a className="flex items-center gap-1"><LinkedIn size={16}></LinkedIn> LinkedIn</a>
+                  <div className="text-gray-500 space-y-2">
+                      <a className="flex items-center gap-1"><div className="border border-gray-500 p-1 rounded-full"><Instagram size={16}></Instagram></div> Instagram</a>
+                      <a className="flex items-center gap-1"><div className="border border-gray-500 p-1 rounded-full"><Facebook size={16}></Facebook></div> Facebook</a>
+                      <a className="flex items-center gap-1"><div className="border border-gray-500 p-1 rounded-full"><X size={16}></X></div> X</a>
+                      <a className="flex items-center gap-1"><div className="border border-gray-500 p-1 rounded-full"><LinkedIn size={16}></LinkedIn></div> LinkedIn</a>
                   </div>
               </div>
               <div className="space-y-4">
